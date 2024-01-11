@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sono', sans-serif;
+      background-color: white;
+    }
+    ul{
+      list-style: none;
+      font-size: .9rem;
+    }
+    li{
+      margin: 15px 0;
+    }
+    button{
+      border-radius: 8px;
+      padding: 8px;
+      margin-top: 10px ;
+      border: 0;
+    }
+    .plan-title{
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 30px;
+      border-radius: 15px 15px 0px 0px;
+    }
+    .plan-price{
+      margin: 25px 0;
+      font-weight: bolder;
+      font-size: 2.3rem;
+    }
+    sub{
+      font-size: 1rem;
+    }
+    sub.Super{
+      font-size: 2rem;
+      padding: 5px;
+      vertical-align: super;
+    }    
+    .plan-features{
+      text-align: justify;
+    }
+    .orangeBG{
+      background-image: linear-gradient(to bottom right, yellow, red);
+    }
+
+    .purpleBG{
+      background-image: linear-gradient(to bottom right, #711DB0, #9BB8CD);
+    }
+
+    .blueBG{
+      background-image: linear-gradient(to bottom right, #C69774, #750E21);
+    }
+
+    @media (min-width: 1251px){
+      .pricing-container{
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0 20px;
+    }
+    .pricing-plan{
+      text-align: center;
+      flex: 1;
+      max-width: 350px;
+      height: 350px;
+      background-color: #f2f2f2;
+      border-radius: 15px;
+    }
+
+    }
+    @media (max-width: 1250px) {
+      .pricing-container{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .pricing-plan{
+      margin: 5px 0;
+      text-align: center;
+      flex: 1;
+      width: 300px;
+      max-height: 400px;
+      background-color: #f2f2f2;
+      border-radius: 15px;
+      padding-bottom: 10px;
+    }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title orangeBG">Basic</div>
+      <div class="plan-price"><sub class="Super">$</sub>9.99<sub>/month</sub></div>
+      <ul class="plan-features">
+        <li>✅ 10GB Storage</li>
+        <li>✅ 1 User</li>
+        <li>🚫 Support</li>
+      </ul>
+      <button class="plan-button orangeBG">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title purpleBG">Standard</div>
+      <div class="plan-price"><sub class="Super">$</sub>19.99<sub>/month</sub></div>
+      <ul class="plan-features">
+        <li>✅ 50GB Storage</li>
+        <li>✅ 5 Users</li>
+        <li>✅ Phone &amp; Email Support</li>
+      </ul>
+      <button class="plan-button purpleBG">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title blueBG">Premium</div>
+      <div class="plan-price"><sub class="Super">$</sub>49.99<sub>/month</sub></div>
+      <ul class="plan-features">
+        <li>✅ 100GB Storage</li>
+        <li>✅ 10 Users</li>
+        <li>✅ 24/7 Support</li>
+      </ul>
+      <button class="plan-button blueBG">Sign Up</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
